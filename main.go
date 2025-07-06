@@ -14,8 +14,7 @@ func main() {
 
 	app.OnServe().BindFunc(func(se *core.ServeEvent) error {
 		// serves static files from the provided public dir (if exists)
-		se.Router.GET("/{path...}", apis.Static(os.DirFS("./public"), false))
-
+		se.Router.GET("/{path...}", apis.Static(os.DirFS("./pb_public"), true))
 		return se.Next()
 	})
 

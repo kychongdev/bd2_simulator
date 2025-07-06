@@ -6,7 +6,7 @@ export const Route = createFileRoute("/")({
 });
 
 function RouteComponent() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return <h1>{t("Welcome to React")}</h1>;
 }
